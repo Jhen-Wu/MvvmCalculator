@@ -1,0 +1,86 @@
+﻿<Window x:Class="MvvmCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MvvmCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#222">
+        <Grid RowDefinitions="Auto,*"
+          Margin="10">
+
+            <!-- 顯示器 -->
+            <TextBox Text="{Binding Display}"
+                 FontSize="48"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Margin="0,0,0,10"
+                 IsReadOnly="True"
+                 Background="Black"
+                 Foreground="White"
+                 BorderThickness="0"
+                 TextAlignment="Right"/>
+
+            <!-- 按鍵 -->
+            <Grid Grid.Row="1"
+              RowDefinitions="*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*">
+
+                <!-- 數字鍵 -->
+                <Button Content="7" Grid.Row="0" Grid.Column="0"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="7"/>
+                <Button Content="8" Grid.Row="0" Grid.Column="1"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="8"/>
+                <Button Content="9" Grid.Row="0" Grid.Column="2"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="9"/>
+
+                <!-- 運算符號 -->
+                <Button Content="+" Grid.Row="0" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="+"/>
+
+                <Button Content="4" Grid.Row="1" Grid.Column="0"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="4"/>
+                <Button Content="5" Grid.Row="1" Grid.Column="1"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="5"/>
+                <Button Content="6" Grid.Row="1" Grid.Column="2"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="6"/>
+                <Button Content="-" Grid.Row="1" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="-"/>
+
+                <Button Content="1" Grid.Row="2" Grid.Column="0"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="1"/>
+                <Button Content="2" Grid.Row="2" Grid.Column="1"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="2"/>
+                <Button Content="3" Grid.Row="2" Grid.Column="2"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="3"/>
+                <Button Content="*" Grid.Row="2" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="*"/>
+
+                <Button Content="0" Grid.Row="3" Grid.Column="0"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="0"/>
+                <Button Content="AC" Grid.Row="3" Grid.Column="1"
+                    Command="{Binding ClearCommand}"/>
+                <Button Content="=" Grid.Row="3" Grid.Column="2"
+                    Command="{Binding EqualCommand}"/>
+                <Button Content="/" Grid.Row="3" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="/"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
