@@ -12,124 +12,126 @@
 
             <!-- 顯示器 -->
             <TextBox Text="{Binding Display}"
-                 FontSize="48"
-                 HorizontalAlignment="Stretch"
-                 VerticalAlignment="Center"
-                 Margin="0,0,0,10"
-                 IsReadOnly="True"
-                 Background="Black"
-                 Foreground="White"
-                 BorderThickness="0"
-                 TextAlignment="Right"/>
+                    FontSize="48"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,10"
+                    IsReadOnly="True"
+                    Background="Black"
+                    Foreground="White"
+                    BorderThickness="0"
+                    TextAlignment="Right"/>
 
             <!-- 按鍵 -->
             <Grid Grid.Row="1"
-              RowDefinitions="*,*,*,*,*"
-              ColumnDefinitions="*,*,*,*">
+                    RowDefinitions="*,*,*,*,*"
+                    ColumnDefinitions="*,*,*,*">
 
                 <!-- 數字鍵 -->
-                <Button Content="0" Grid.Row="4" Grid.Column="1"
+            <Button Content="0" Grid.Row="4" Grid.Column="1"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="0"/>
                 
-                <Button Content="1" Grid.Row="3" Grid.Column="0"
-                        FontSize="36"
-                        Command="{Binding NumberCommand}"
-                        CommandParameter="1"/>
+            <Button Content="1" Grid.Row="3" Grid.Column="0"
+                    FontSize="36"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="1"/>
 
-                <Button Content="2" Grid.Row="3" Grid.Column="1"
-                        FontSize="36"
-                        Command="{Binding NumberCommand}"
-                        CommandParameter="2"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1"
+                    FontSize="36"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="2"/>
 
-                <Button Content="3" Grid.Row="3" Grid.Column="2"
-                        FontSize="36"
-                        Command="{Binding NumberCommand}"
-                        CommandParameter="3"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2"
+                    FontSize="36"
+                    Command="{Binding NumberCommand}"
+                    CommandParameter="3"/>
                 
-                <Button Content="4" Grid.Row="2" Grid.Column="0"
+            <Button Content="4" Grid.Row="2" Grid.Column="0"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="4"/>
 
-                <Button Content="5" Grid.Row="2" Grid.Column="1"
+            <Button Content="5" Grid.Row="2" Grid.Column="1"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="5"/>
 
-                <Button Content="6" Grid.Row="2" Grid.Column="2"
+            <Button Content="6" Grid.Row="2" Grid.Column="2"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="6"/>
                 
-                <Button Content="7" Grid.Row="1" Grid.Column="0"
+            <Button Content="7" Grid.Row="1" Grid.Column="0"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="7"/>
-                <Button Content="8" Grid.Row="1" Grid.Column="1"
+                
+            <Button Content="8" Grid.Row="1" Grid.Column="1"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="8"/>
-                <Button Content="9" Grid.Row="1" Grid.Column="2"
+                
+            <Button Content="9" Grid.Row="1" Grid.Column="2"
                     FontSize="36"
                     Command="{Binding NumberCommand}"
                     CommandParameter="9"/>
 
-                <!-- 基本四則運算符號 -->
-                <Button Content="+" Grid.Row="0" Grid.Column="3"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding OperatorCommand}"
-                        CommandParameter="+"/>
+            <!-- 基本四則運算符號 -->
+            <Button Content="+" Grid.Row="0" Grid.Column="3"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="+"/>
 
-                <Button Content="−" Grid.Row="1" Grid.Column="3"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding OperatorCommand}"
-                        CommandParameter="-"/>
+            <Button Content="−" Grid.Row="1" Grid.Column="3"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="-"/>
 
-                <Button Content="×" Grid.Row="2" Grid.Column="3"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding OperatorCommand}"
-                        CommandParameter="*"/>
+            <Button Content="×" Grid.Row="2" Grid.Column="3"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="*"/>
 
-                <Button Content="÷" Grid.Row="3" Grid.Column="3"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding OperatorCommand}"
-                        CommandParameter="/"/>
+            <Button Content="÷" Grid.Row="3" Grid.Column="3"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="/"/>
 
-                <Button Content="=" Grid.Row="4" Grid.Column="3"
-                        FontSize="36"
-                        Background="#FF00FF00"
-                        Command="{Binding EqualCommand}"/>
+            <Button Content="=" Grid.Row="4" Grid.Column="3"
+                    FontSize="36"
+                    Background="#FF00FF00"
+                    Command="{Binding EqualCommand}"/>
 
-                <!-- 其他符號 -->
-                <Button Content="AC" Grid.Row="0" Grid.Column="0"
-                        FontSize="36"
-                        Foreground="Red"
-                        Command="{Binding ClearCommand}"/>
+            <!-- 其他符號 -->
+            <Button Content="AC" Grid.Row="0" Grid.Column="0"
+                    FontSize="36"
+                    Foreground="Red"
+                    Command="{Binding ClearCommand}"/>
                                              
-                <Button Content="←" Grid.Row="4" Grid.Column="0"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding BackspaceCommand}" />
+            <Button Content="←" Grid.Row="4" Grid.Column="0"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding BackspaceCommand}" />
 
-                <Button Content="." Grid.Row="4" Grid.Column="2"
-                        FontSize="36"
-                        Command="{Binding DotCommand}" />
+            <Button Content="." Grid.Row="4" Grid.Column="2"
+                    FontSize="36"
+                    Command="{Binding DotCommand}" />
 
-                <Button Content="%" Grid.Row="0" Grid.Column="2"
-                        FontSize="36"
-                        Foreground="Green"
+            <Button Content="%" Grid.Row="0" Grid.Column="2"
+                    FontSize="36"
+                    Foreground="Green"
                         Command="{Binding PercentCommand}" />
 
-                <Button Content="√" Grid.Row="0" Grid.Column="1"
-                        FontSize="36"
-                        Foreground="Green"
-                        Command="{Binding SqrtCommand}" />
+            <Button Content="√" Grid.Row="0" Grid.Column="1"
+                    FontSize="36"
+                    Foreground="Green"
+                    Command="{Binding SqrtCommand}" />
                                        
             </Grid>
         </Grid>
